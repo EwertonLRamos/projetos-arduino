@@ -15,7 +15,7 @@ void loop(){
 
   Serial.println(var);
   //O VALOR 600 PODE SER AJUSTADO
-  if(var < 200) //SE O VALOR LIDO FOR MENOR QUE 600, FAZ
+  if(var < 850) //SE O VALOR LIDO FOR MENOR QUE 600, FAZ
     digitalWrite(pinoLed, HIGH); //ACENDE O LED
   else //SENÃO, FAZ
     digitalWrite(pinoLed, LOW); //APAGA O LED  
