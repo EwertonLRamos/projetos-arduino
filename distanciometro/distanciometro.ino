@@ -1,11 +1,12 @@
 #define trigger1 2
 #define echo1 3
-#define trigger2 4
-#define echo2 5
-#define trigger3 6
-#define echo3 7
+#define trigger2 6
+#define echo2 7
+#define trigger3 9
+#define echo3 10
 
-#define buzzer 11
+#define buzzer 13
+#define led 11
 
 long tempo1;
 long distancia1;
@@ -24,6 +25,7 @@ void setup(){
   pinMode(echo3 , INPUT);
   
   pinMode(buzzer, OUTPUT);
+  pinMode(led, OUTPUT);
 
   Serial.begin(9600);
 }
@@ -100,14 +102,14 @@ void loop(){
         distanciay > 0.00 && distanciay <= 15.00 ||
         distanciaz > 0.00 && distanciaz <= 15.00){
     
-      digitalWrite(11, HIGH);
-      digitalWrite(10, HIGH);
+      digitalWrite(buzzer, HIGH);
+      digitalWrite(led, HIGH);
     
       delay(2000);
     }
   }
   else{ 
-    digitalWrite(10, LOW);
-    digitalWrite(11, LOW);
+    digitalWrite(buzzer, LOW);
+    digitalWrite(led, LOW);
   }
 }
